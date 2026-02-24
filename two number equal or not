@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
+    
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
+
+    // We use '==' to compare (don't use a single '=')
+    if (num1 == num2) {
+        printf("\nResult: Both numbers are equal!\n");
+    } 
+    else {
+        printf("\nResult: The numbers are not equal.\n");
+    }
+
+    return 0;
+}
