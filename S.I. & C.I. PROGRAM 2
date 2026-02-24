@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h> // Required for the pow() function used in Compound Interest
+
+int main() {
+    float principal, rate, time, SI, CI;
+
+    printf("Enter the Principal amount: ");
+    scanf("%f", &principal);
+
+    printf("Enter the Rate of interest (annually): ");
+    scanf("%f", &rate);
+
+    printf("Enter the Time period (in years): ");
+    scanf("%f", &time);
+
+    SI = (principal * rate * time) / 100;
+
+    CI = principal * (pow((1 + rate / 100), time)) - principal;
+
+    printf("\n--- Interest Calculation ---\n");
+    printf("Simple Interest: %.2f\n", SI);
+    printf("Compound Interest: %.2f\n", CI);
+    printf("Total Amount (CI): %.2f\n", principal + CI);
+
+    return 0;
+}
