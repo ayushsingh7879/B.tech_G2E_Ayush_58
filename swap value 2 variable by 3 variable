@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, temp;
+
+    printf("Enter value for A: ");
+    scanf("%d", &a);
+    printf("Enter value for B: ");
+    scanf("%d", &b);
+
+    printf("\nBefore Swapping: A = %d, B = %d\n", a, b);
+
+    temp = a;    // Step 1: Move A into the 'Empty Cup' (temp)
+    a = b;       // Step 2: Move B into Cup A (now that A is safe in temp)
+    b = temp;    // Step 3: Move the value from temp into Cup B
+
+    printf("After Swapping:  A = %d, B = %d\n", a, b);
+
+    return 0;
+}
