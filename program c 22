@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+  int size; // To store the number of elements
+  int i;    // Loop counter
+  int sum = 0; // To store the cumulative sum, initialized to 0
+
+  printf("Enter the number of elements in the array: ");
+  scanf("%d", &size);
+
+  int arr[size]; // Declare an array of the specified size
+
+  printf("Enter %d elements:\n", size);
+  for (i = 0; i < size; i++) {
+    scanf("%d", &arr[i]); // Read elements into the array
+  }
+
+  for (i = 0; i < size; i++) {
+    sum += arr[i]; // Add each element to the sum
+  }
+
+  printf("Sum of array elements = %d\n", sum);
+
+  return 0;
+}
